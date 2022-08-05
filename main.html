@@ -3,7 +3,7 @@
 
 <head>
 	<title>
-		Avas Tool Prep
+		Avas Tool Prep Main
 	</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
@@ -15,7 +15,7 @@
     <div class="nav-wrapper">
       <a class="brand-logo center">Welcome To Your Tool Set Up Process!</a>
       <ul class="left hide-on-med-and-down">
-        <li><a href="sass.html">Request Help</a></li>
+        <li><a href="mailto:wfmanagement@avasflowers.com?subject=Help Needed With Tools&body=I need help with:" onclick="alertbox()">Request Help</a></li>
       </ul>
     </div>
   </nav>
@@ -92,7 +92,9 @@
         if (navigator.userAgent.indexOf("like Mac") != -1) document.getElementById('vpn_2ndStep').setAttribute("href", "https://apps.apple.com/us/app/linphone/id360065638");
         if (navigator.userAgent.indexOf("Android") != -1) document.getElementById('vpn_2ndStep').setAttribute("href", "https://play.google.com/store/apps/details?id=org.linphone");
     }
-
+		function alertbox() {
+			alert("Help Is Available From 9AM EST to 6PM EST Mon - Sunday")
+		}
 
 	</script>
 </body>
