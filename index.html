@@ -54,10 +54,11 @@
 		}
 
     function vpn_1stStep() {
-      document.getElementById('stepOne').removeAttribute("hidden")
-        document.getElementById('vpn_1stStep').removeAttribute("hidden")
-        if (name = "Windows OS") document.getElementById('vpn_1stStep').setAttribute("href", "https://setup.mnxsolutions.com/Fortinet/FortiClientVPNSetup_6.2.6.0951_x64.exe");
-        if (name = "Mac OS") document.getElementById('vpn_1stStep').setAttribute("href", "https://setup.mnxsolutions.com/Fortinet/FortiClientVPNSetup_6.2.6.737_macosx.dmg");
+      document.getElementById('stepOne').removeAttribute("hidden");
+        document.getElementById('vpn_1stStep').removeAttribute("hidden");
+        if (navigator.userAgent.indexOf("Mac") != -1) document.getElementById('vpn_1stStep').setAttribute("href", "https://setup.mnxsolutions.com/Fortinet/FortiClientVPNSetup_6.2.6.737_macosx.dmg");
+        if (navigator.userAgent.indexOf("Win") document.getElementById('vpn_1stStep').setAttribute("href", "https://setup.mnxsolutions.com/Fortinet/FortiClientVPNSetup_6.2.6.0951_x64.exe");
+        if (navigator.userAgent.indexOf("like Mac") != -1) document.getElementById('vpn_2ndStep').setAttribute("href", "https://apps.apple.com/us/app/forticlient-6-0/id525600370");
         
     }
 
@@ -68,9 +69,16 @@
         document.getElementById('vpn_2ndStep').removeAttribute("hidden")
         if (navigator.userAgent.indexOf("Mac") != -1) document.getElementById('vpn_2ndStep').setAttribute("href", "https://www.linphone.org/releases/macosx/app/Linphone-4.4.1-mac.dmg");
         if (navigator.userAgent.indexOf("Win") != -1) document.getElementById('vpn_2ndStep').setAttribute("href", "https://www.zoiper.com/en/voip-softphone/download/zoiper3/for/windows");
-        if (navigator.userAgent.indexOf("like Mac") != -1) document.getElementById('vpn_2ndStep').setAttribute("href", "https://apps.apple.com/us/app/forticlient-6-0/id525600370");
+        if (navigator.userAgent.indexOf("like Mac") != -1) document.getElementById('vpn_2ndStep').setAttribute("href", "https://apps.apple.com/us/app/linphone/id360065638");
 
     }
+
+
+	</script>
+</body>
+
+</html>
+
 
 
 	</script>
