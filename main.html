@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+	<title>
+		Avas Tool Prep
+	</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body style="text-align:center;" id="body">
+	<nav>
+    <div class="nav-wrapper">
+      <a class="brand-logo center">Welcome To Your Tool Set Up Process!</a>
+      <ul class="left hide-on-med-and-down">
+        <li><a href="sass.html">Request Help</a></li>
+      </ul>
+    </div>
+  </nav>
+	<div class="container">
+	
+	<p id="GFG_UP"
+	style="font-size: 19px;
+			font-weight: bold;">
+	</p>
+	<button style="cursor: pointer;" onclick="GFG_Fun()">
+		click here
+	</button>
+	<p id="GFG_DOWN"
+	style="color: green;
+			font-size: 24px;
+			font-weight: bold;">
+	</p>
+	<div>
+  <h2>Below you will see the links appear as you go step by step</h2>
+	<label>Items to Install</label>
+	<ul>
+		<li>Flock Messenger</li>
+		<li>Upwork Tracker</li>
+		<li>FortiClient VPN</li>
+		<li>Software Phone</li>
+		<li>Antivirus Protection</li>
+	</ul>
+	<p><strong>Once you have EVERYTHING set up we will test everything together!</strong></p>
+</div>
+  <p id="stepOne" hidden><strong>Step 1:</strong></p>
+  <p><a id ="vpn_1stStep" hidden>Click Here To Download VPN</a></p>
+  <br>
+  <p id="stepTwo" hidden><strong>Step 2:</strong></p>
+  <p><a id ="vpn_2ndStep" hidden>Click Here To Download Software Phone</a></p>
+  <br>
+</div>
+	<script>
+		var el_up = document.getElementById("GFG_UP");
+		var el_down = document.getElementById("GFG_DOWN");
+		el_up.innerHTML = "Click on the button to get the right steps for your Operating System.";
+		var Name = "Unknown OS";
+		if (navigator.userAgent.indexOf("Win") != -1) Name =
+		"Windows OS";
+		if (navigator.userAgent.indexOf("Mac") != -1) Name =
+		"Mac OS";
+		if (navigator.userAgent.indexOf("Linux") != -1) Name =
+		"Linux OS";
+		if (navigator.userAgent.indexOf("Android") != -1) Name =
+		"Android OS";
+		if (navigator.userAgent.indexOf("like Mac") != -1) Name =
+		"iOS";
+
+		function GFG_Fun() {
+			el_down.innerHTML = Name;
+      vpn_1stStep();
+		}
+
+    function vpn_1stStep() {
+      document.getElementById('stepOne').removeAttribute("hidden");
+        document.getElementById('vpn_1stStep').removeAttribute("hidden");
+        if (navigator.userAgent.indexOf("Mac") != -1) document.getElementById('vpn_1stStep').setAttribute("href", "https://setup.mnxsolutions.com/Fortinet/FortiClientVPNSetup_6.2.6.737_macosx.dmg");
+        if (navigator.userAgent.indexOf("Win") != -1) document.getElementById('vpn_1stStep').setAttribute("href", "https://setup.mnxsolutions.com/Fortinet/FortiClientVPNSetup_6.2.6.0951_x64.exe");
+        if (navigator.userAgent.indexOf("like Mac") != -1) document.getElementById('vpn_1stStep').setAttribute("href", "https://apps.apple.com/us/app/forticlient-6-0/id525600370");
+        if (navigator.userAgent.indexOf("Android") != -1) document.getElementById('vpn_1stStep').setAttribute("href", "https://play.google.com/store/apps/details?id=com.fortinet.forticlient_vpn");
+    }
+
+    document.getElementById('vpn_1stStep').addEventListener('click',vpn_2ndStep);
+
+    function vpn_2ndStep() {
+      document.getElementById('stepTwo').removeAttribute("hidden")
+        document.getElementById('vpn_2ndStep').removeAttribute("hidden")
+        if (navigator.userAgent.indexOf("Mac") != -1) document.getElementById('vpn_2ndStep').setAttribute("href", "https://www.linphone.org/releases/macosx/app/Linphone-4.4.1-mac.dmg");
+        if (navigator.userAgent.indexOf("Win") != -1) document.getElementById('vpn_2ndStep').setAttribute("href", "https://www.zoiper.com/en/voip-softphone/download/zoiper3/for/windows");
+        if (navigator.userAgent.indexOf("like Mac") != -1) document.getElementById('vpn_2ndStep').setAttribute("href", "https://apps.apple.com/us/app/linphone/id360065638");
+        if (navigator.userAgent.indexOf("Android") != -1) document.getElementById('vpn_2ndStep').setAttribute("href", "https://play.google.com/store/apps/details?id=org.linphone");
+    }
+
+
+	</script>
+</body>
+
+</html>
