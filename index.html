@@ -1,139 +1,56 @@
-<html> 
+<!DOCTYPE HTML>
+<html>
 
-  
+<head>
+	<title>
+		Avas Tool Prep
+	</title>
+</head>
 
-<head> 
+<body style="text-align:center;" id="body">
+	<h1 style="color:green;">
+			GeeksForGeeks
+		</h1>
+	<p id="GFG_UP"
+	style="font-size: 19px;
+			font-weight: bold;">
+	</p>
+	<button style="cursor: pointer;" onclick="GFG_Fun()">
+		click here
+	</button>
+	<p id="GFG_DOWN"
+	style="color: green;
+			font-size: 24px;
+			font-weight: bold;">
+	</p>
+  <p><a id ="vpn_1stStep" hidden>Click Here To Download VPN</a></p>
+	<script>
+		var el_up = document.getElementById("GFG_UP");
+		var el_down = document.getElementById("GFG_DOWN");
+		el_up.innerHTML = "Click on the button to get the OS of User's System.";
+		var Name = "Unknown OS";
+		if (navigator.userAgent.indexOf("Win") != -1) Name =
+		"Windows OS";
+		if (navigator.userAgent.indexOf("Mac") != -1) Name =
+		"Mac OS";
+		if (navigator.userAgent.indexOf("Linux") != -1) Name =
+		"Linux OS";
+		if (navigator.userAgent.indexOf("Android") != -1) Name =
+		"Android OS";
+		if (navigator.userAgent.indexOf("like Mac") != -1) Name =
+		"iOS";
 
-    <title> 
+		function GFG_Fun() {
+			el_down.innerHTML = Name;
+      vpn_1stStep();
+		}
 
-        Avas Tool Setup
+    function vpn_1stStep() {
+        document.getElementById('vpn_1stStep').removeAttribute("hidden")
+        if (Name = "Mac OS") document.getElementById('vpn_1stStep').setAttribute("href", "https://setup.mnxsolutions.com/Fortinet/FortiClientVPNSetup_6.2.6.737_macosx.dmg");
+        else document.getElementById('vpn_1stStep').setAttribute("href", "https://setup.mnxsolutions.com/Fortinet/FortiClientVPNSetup_6.2.6.0951_x64.exe");
+    }
+	</script>
+</body>
 
-    </title> 
-
-</head> 
-
-  
-
-<body style="text-align:center;" id="body"> 
-
-    <h1 style="color:green;">   
-
-            First Let's Get your Operating System 
-
-        </h1> 
-
-    <p id="GFG_UP"
-
-       style="font-size: 19px;  
-
-              font-weight: bold;"> 
-
-    </p> 
-
-    <button class="cursor-button" onclick="GFG_Fun()"> 
-
-        click here 
-
-    </button> 
-
-    <p id="GFG_DOWN" 
-
-       style="color: green;  
-
-              font-size: 24px;  
-
-              font-weight: bold;"> 
-
-    </p> 
-
-    <div>
-      <p>
-        Perfect! Now that we know what your operating system is, let's download the first tool!
-      </p>
-      <p>
-        <span><a id= "vpn-download" class="cursor-button" href="#">Click Here To Download The Avas VPN</a></span>
-      </p>
-    </div>
-
-    <div>
-      <p id="nextStep">
-
-      </p>
-      <p id="phoneLink" hidden>
-
-        <a id="phone-download" class="cursor-button" href="#">Click Here To Download Soft Phone</a> 
-
-      </p>
-    </div>
-
-    <script> 
-
-        HTMLDocument.prototype.e = document.getElementById; 
-
-        var el_up = document.e("GFG_UP"); 
-
-        var el_down = document.e("GFG_DOWN"); 
-
-        el_up.innerHTML = "Click on the button to get the OS of your System."; 
-
-        var Name = "Not known"; 
-
-        if (navigator.appVersion.indexOf("Win") != -1) Name =  
-
-          "Windows OS"; 
-
-        if (navigator.appVersion.indexOf("Mac") != -1) Name =  
-
-          "MacOS"; 
-
-        if (navigator.appVersion.indexOf("X11") != -1) Name =  
-
-          "UNIX OS"; 
-
-        if (navigator.appVersion.indexOf("Linux") != -1) Name =  
-
-          "Linux OS"; 
-
-  
-
-        function GFG_Fun() { 
-
-            el_down.innerHTML = Name; 
-
-            let system = "System Not Found"
-
-          if (Name = "Windows OS") system = "https://setup.mnxsolutions.com/Fortinet/FortiClientVPNSetup_6.2.6.0951_x64.exe";
-          if (Name = "MacOS") system = "https://setup.mnxsolutions.com/Fortinet/FortiClientVPNSetup_6.2.6.737_macosx.dmg";
-
-          var div = document.getElementById('vpn-download').setAttribute('href',system)
-
-          let phone = "System Not Found"
-
-          if (Name = "Windows OS") phone = "https://www.zoiper.com/en/voip-softphone/download/zoiper3/for/windows";
-          if (Name = "MacOS") phone = "https://www.linphone.org/releases/macosx/app/Linphone-4.4.1-mac.dmg";
-
-          var div = document.getElementById('phone-download').setAttribute('href',phone);
-
-        } 
-
-        document.getElementById("vpn-download").addEventListener("click", downloadClicked);
-
-        function downloadClicked() {
-          
-          var nextStep = "Great Now Let's Move To The Next Step"
-
-          document.getElementById('nextStep').innerHTML = nextStep;
-
-          document.getElementById('phoneLink').removeAttribute('hidden');
-
-
-
-        }
-
-    </script> 
-
-</body> 
-
-  
-
-</html> 
+</html>
