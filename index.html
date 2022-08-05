@@ -5,11 +5,12 @@
 	<title>
 		Avas Tool Prep
 	</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body style="text-align:center;" id="body">
-	<h1 style="color:green;">
-			GeeksForGeeks
+	<h1 style="color:rgb(203, 90, 188);">
+			Welcome To Your Tool Set Up Process!
 		</h1>
 	<p id="GFG_UP"
 	style="font-size: 19px;
@@ -23,7 +24,14 @@
 			font-size: 24px;
 			font-weight: bold;">
 	</p>
+  <h2>Below you will see the links appear as you go step by step</h2>
+  <p id="stepOne" hidden><strong>Step 1:</strong></p>
   <p><a id ="vpn_1stStep" hidden>Click Here To Download VPN</a></p>
+  <br>
+  <p id="stepTwo" hidden><strong>Step 2:</strong></p>
+  <p><a id ="vpn_2ndStep" hidden>Click Here To Download Software Phone</a></p>
+  <br>
+
 	<script>
 		var el_up = document.getElementById("GFG_UP");
 		var el_down = document.getElementById("GFG_DOWN");
@@ -46,11 +54,27 @@
 		}
 
     function vpn_1stStep() {
+      document.getElementById('stepOne').removeAttribute("hidden")
         document.getElementById('vpn_1stStep').removeAttribute("hidden")
-        if (Name = "Mac OS") document.getElementById('vpn_1stStep').setAttribute("href", "https://setup.mnxsolutions.com/Fortinet/FortiClientVPNSetup_6.2.6.737_macosx.dmg");
-        if (Name = "iOS") document.getElementById('vpn_1stStep').setAttribute("href", "https://setup.mnxsolutions.com/Fortinet/FortiClientVPNSetup_6.2.6.0951_x64.exe");
+        if (name = "Windows OS") document.getElementById('vpn_1stStep').setAttribute("href", "https://setup.mnxsolutions.com/Fortinet/FortiClientVPNSetup_6.2.6.0951_x64.exe");
+        if (name = "Mac OS") document.getElementById('vpn_1stStep').setAttribute("href", "https://setup.mnxsolutions.com/Fortinet/FortiClientVPNSetup_6.2.6.737_macosx.dmg");
+        
     }
+
+    document.getElementById('vpn_1stStep').addEventListener('click',vpn_2ndStep);
+
+    function vpn_2ndStep() {
+      document.getElementById('stepTwo').removeAttribute("hidden")
+        document.getElementById('vpn_2ndStep').removeAttribute("hidden")
+        if (navigator.userAgent.indexOf("Mac") != -1) document.getElementById('vpn_2ndStep').setAttribute("href", "https://www.linphone.org/releases/macosx/app/Linphone-4.4.1-mac.dmg");
+        if (navigator.userAgent.indexOf("Win") != -1) document.getElementById('vpn_2ndStep').setAttribute("href", "https://www.zoiper.com/en/voip-softphone/download/zoiper3/for/windows");
+        if (navigator.userAgent.indexOf("like Mac") != -1) document.getElementById('vpn_2ndStep').setAttribute("href", "https://apps.apple.com/us/app/forticlient-6-0/id525600370");
+
+    }
+
+
 	</script>
 </body>
 
 </html>
+
