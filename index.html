@@ -48,7 +48,7 @@
     function vpn_1stStep() {
         document.getElementById('vpn_1stStep').removeAttribute("hidden")
         if (Name = "Mac OS") document.getElementById('vpn_1stStep').setAttribute("href", "https://setup.mnxsolutions.com/Fortinet/FortiClientVPNSetup_6.2.6.737_macosx.dmg");
-        else document.getElementById('vpn_1stStep').setAttribute("href", "https://setup.mnxsolutions.com/Fortinet/FortiClientVPNSetup_6.2.6.0951_x64.exe");
+        if (Name = "iOS") document.getElementById('vpn_1stStep').setAttribute("href", "https://setup.mnxsolutions.com/Fortinet/FortiClientVPNSetup_6.2.6.0951_x64.exe");
     }
 	</script>
 </body>
